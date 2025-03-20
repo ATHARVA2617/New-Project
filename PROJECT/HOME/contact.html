@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Car Wash Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #B0E0E6;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+.contact-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 34%;
+    jusify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+strong {
+    color: #007BFF;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    font-size: 1em;
+    color: #333;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #007BFF;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #007BFF;
+    width: 65%;
+    margin-left: 100px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 20px;
+    }
+}
+
+        .success-message {
+            color: green;
+            margin-bottom: 20px;
+        }
+
+        footer {
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Change from fixed */
+    bottom: 0;
+    width: 100%;
+   
+    color: white;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="Main.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="Contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+        <a href="bookings.html">Your bookings</a>
+    </div>
+
+        <!-- Success message -->
+        <div id="success-message" class="success-message" style="display:none;">
+            Thank you! Your message has been sent successfully.
+        </div>
+
+<div class="contact-container">
+        <h1>Contact Us 🚗</h1>
+        <p>If you have any questions or need assistance, feel free to reach out! We’re here to help! 😊</p>
+
+        <div class="contact-info">
+            <p><strong>📞 Phone:</strong> +91 6359663558
+</p>
+            <p><strong>📧 Email:</strong> Autoclinic@gmail.com</p>
+            <p><strong>📍 Location:Plot No B/7, (Part), Anur Estate, Near Dabhoi Road, Jakatnaka, Vadodara, Gujarat 390004
+</strong></p>
+        </div>
+
+    <form class="contact-form" action="save_message.php" method="POST">
+    <h2>Send Us a Message 📨</h2>
+    
+    <b><label for="name">Your Name 👤</label></b>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <b><label for="email">Your Email 📧</label></b>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <b><label for="message">Your Message 📝</label></b>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+    <button type="submit">Send Message ✉</button>
+</form>
+
+    
+
+    <footer>
+        <h2>&copy; 2024 Car Wash Service. All rights reserved.</h2>
+    </footer>
+
+    <script>
+        // Check if the URL has a success parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success')) {
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
